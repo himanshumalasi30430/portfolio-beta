@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import './screens/home.dart';
 import './screens/skills.dart';
 import './screens/contact.dart';
@@ -106,6 +107,9 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
     return Scaffold(
       key: _scaffoldKey,
       endDrawer: Drawer(
